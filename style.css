@@ -1,0 +1,24 @@
+body, html {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #393939;
+}
+body .stagger-visualizer, html .stagger-visualizer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 450px;
+}
+body .stagger-visualizer div, html .stagger-visualizer div {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #000;
+  background-color: #fff;
+}/*# sourceMappingURL=style.css.map */

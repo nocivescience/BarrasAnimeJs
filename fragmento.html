@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de fragmento de documento</title>
+  </head>
+  <body>
+    <ul id="mi-lista"></ul>
+
+    <script>
+      // Creamos un fragmento de documento vacío
+      const fragmento = document.createDocumentFragment();
+
+    const paraElFragmento =document.createTextNode("Hola, soy un nodo de texto que pertenece al fragmento de documento") 
+    fragmento.appendChild(paraElFragmento)
+
+      // Array de elementos a agregar a la lista
+      const elementos = [
+        { nombre: "Elemento 1", valor: "Valor 1" },
+        { nombre: "Elemento 2", valor: "Valor 2" },
+        { nombre: "Elemento 3", valor: "Valor 3" }
+      ];
+
+      // Iteramos sobre el array de elementos y creamos nodos de lista para cada uno
+      elementos.forEach(elemento => {
+        const li = document.createElement("li");
+        const nombre = document.createElement("span");
+        const valor = document.createElement("span");
+
+        nombre.textContent = elemento.nombre;
+        valor.textContent = elemento.valor;
+
+        li.appendChild(nombre);
+        li.appendChild(valor);
+
+        fragmento.appendChild(li);
+      });
+
+      // Agregamos el fragmento completo a la lista
+      const lista = document.getElementById("mi-lista");
+      lista.appendChild(fragmento);
+    </script>
+  </body>
+</html>
